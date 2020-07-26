@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body {
+	background-color: #1314178f;
+	margin: 0;
+    padding: 0;
+}
+
+.Mid-Line{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	background-color: white;
+    height: 0px;
+    width: 100%;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 3;
+	animation: Preloader-line 4s ease;
+}
+.Pr-Before{
+	position: absolute;
+    top: 0;
+    background-color: #131417;
+    height: 0%;
+    width: 100%;
+	z-index: 2;
+	animation: Preloader-before 6s ease;
+}
+.Pr-After{
+	position: absolute;
+	bottom: 1px;
+    background-color: #131417;
+    height: 0%;
+    width: 100%;
+	z-index: 2;
+	animation: Preloader-after 6s ease;
+}
+.Loading{
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  filter: blur(25px);
+  opacity: 0;
+  color: white;
+  animation: Preloader-loading 4s ease;
+}
+@keyframes Preloader-line { 
+  0% { 
+	width: 0%;
+	height: 1px;
+	opacity: 1;
+  } 
+  70% {
+	width: 100%;
+	height: 1px;
+	opacity: 1;
+  }
+  99% {
+	height: 1px;
+	opacity: 0;
+  }
+  100% {
+	height: 0px;
+  }
+}
+
+@keyframes Preloader-loading { 
+  0% { 
+	font-size: 15px;
+	filter: blur(0px);
+	opacity: 1;
+  } 
+  70% {
+	font-size: 15px;
+	filter: blur(0px);
+	opacity: 1;
+  }
+  100% {
+	filter: blur(25px);
+	font-size: 25px;
+	opacity: 0;
+  }
+}
+
+@keyframes Preloader-before { 
+  0% { 
+	height: 50%;
+	opacity: 1;
+  } 
+  45% { 
+	height: 50%;
+  } 
+  70% {
+	height: 0%;
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+
+@keyframes Preloader-after { 
+  0% { 
+	height: 50%;
+	opacity: 1;
+  } 
+  45% { 
+	height: 50%;
+  } 
+  70% {
+	height: 0%;
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+/*links to owner, don't pay attention*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  color: white;
+}
+
+.fa{
+  transform: scale(1.5);
+}
