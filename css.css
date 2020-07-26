@@ -45,7 +45,7 @@ body {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  font-size: 0px;
   filter: blur(25px);
   opacity: 0;
   color: white;
@@ -82,10 +82,13 @@ body {
 	filter: blur(0px);
 	opacity: 1;
   }
-  100% {
+  99% {
 	filter: blur(25px);
 	font-size: 25px;
 	opacity: 0;
+  }
+  100% {
+	font-size: 0px;
   }
 }
 
